@@ -59,6 +59,11 @@ public:
         return QQmlListProperty<QObject>(this, m_objects);
     }
 
+    Q_INVOKABLE QQmlListProperty<QObject> invokableObjectList()
+    {
+        return objectList();
+    }
+
     QQmlListProperty<MyGadget> gadgetList()
     {
         return QQmlListProperty<MyGadget>(this, m_gadgets);

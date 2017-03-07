@@ -26,6 +26,15 @@ Window {
         console.log(myObject.objectList[0].objectName);
         console.log(myObject.objectList[1].objectName);
 
+        var invokedObjectList = myObject.invokableObjectList();
+        printList("invokable objects", invokedObjectList);
+        if (invokedObjectList.length > 0) {
+            console.log(invokedObjectList[0].objectName);
+            console.log(invokedObjectList[1].objectName);
+        } else {
+            console.warn("FAIL: Invokable list is unusable!");
+        }
+
         printList("gadgets", myObject.gadgetList);
         //console.log(myObject.gadgetList[0].a, myObject.gadgetList[0].b);
         //console.log(myObject.gadgetList[1].a, myObject.gadgetList[1].b);
